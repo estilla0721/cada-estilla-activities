@@ -1,6 +1,6 @@
 body {
     font-family: Arial;
-    background: #c7b7b7;
+    background: #ebe7e7;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -27,4 +27,14 @@ button {
     color: rgb(7, 7, 7);
     border:2px solid black;
     border-radius: 5px;
+}
+.error {
+    color: #807c7c;
+    padding: 12px 16px;
+    border: 2px solid #350713;
+    background-color: rgb(156, 82, 82);
+    border-radius: 10px;
+    font-size:14px;
+    text-align:center;
+    visibility: hidden;
 }

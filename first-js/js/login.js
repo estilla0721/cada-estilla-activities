@@ -1,17 +1,22 @@
 function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    const confirm_password = document.getElementById('confirm_password').value;
-    const full_name = document.getElementById('full_name').value;
+
+    const error = document.getElementById('error');
     
-    if((username == "") || (password == "") || (confirm_password == "") || (full_name == "")){
-        alert("kargaam amin");
+    if((username == "estilla") && (password == "072106")) {
+        error.innerHTML = "Login succesful";
+        error.style.color= "#155724";
+        error.style.background = '#d4edda';
+        error.style.visibility = 'visible';
     }
 
-    else if( password !== confirm_password) {
-        alert("password mismatch");
-    }
     else {
-        alert("register successfully");
+        error.innerHTML = "Invalid Credentials";
+        error.style.color= "#721c24";
+         error.style.background = '#f8d7da';
+        error.style.visibility = "visible";
+        error.style.borderLeft = "5px solid #dc3545";
+        error.style.borderRight = "5px solid #dc3545";
     }
 }
