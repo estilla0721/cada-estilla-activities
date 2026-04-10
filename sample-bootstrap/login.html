@@ -36,14 +36,17 @@ loginForm.addEventListener("submit", function(e){
 
 e.preventDefault();
 
-const username = document.getElementById("username").value.trim();
+const username = document.getElementById("username").value.trim().toLowerCase();
 const password = document.getElementById("password").value.trim();
 const errorMsg = document.getElementById("errorMsg");
 
-const correctUsername = "estilla";
-const correctPassword = "12345";
+const validUsers = {
+"estilla": "12345",
+"marvin": "marvin123",
+"admin": "admin123"
+};
 
-if(username === correctUsername && password === correctPassword){
+if(Object.prototype.hasOwnProperty.call(validUsers, username) && validUsers[username] === password){
 
 logActivity("User Login", username);
 
